@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Your CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- html2pdf.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Create Your CV</h1>
+    <p>Fill the form and your CV will be generated automatically</p>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <h2>Personal Information</h2>
+
+      <form id="cvForm" onsubmit="return false;">
+        <label>
+          Full Name
+          <input type="text" id="fullName" placeholder="Kechairi Imene">
+        </label>
+
+        <label>
+          Job Title
+          <input type="text" id="jobTitle" placeholder="Web Developer">
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="email" placeholder="email@gmail.com">
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" id="phone">
+        </label>
+
+        <label>
+          Location
+          <input type="text" id="location">
+        </label>
+
+        <label>
+          Professional Summary
+          <textarea id="summary" rows="4"></textarea>
+        </label>
+
+        <!-- Dynamic Skills -->
+        <label>
+          Skills
+          <div id="skillsContainer">
+            <input type="text" class="skillInput" placeholder="HTML">
+          </div>
+          <button type="button" id="addSkillBtn">+ Add Skill</button>
+        </label>
+
+        <!-- Dynamic Education -->
+        <label>
+          Education
+          <div id="educationContainer">
+            <input type="text" class="educationInput" placeholder="2023 – Present: Applied Computer Science, University ...">
+          </div>
+          <button type="button" id="addEducationBtn">+ Add Education</button>
+        </label>
+
+        <!-- Dynamic Experience -->
+        <label>
+          Experience
+          <div id="experienceContainer">
+            <input type="text" class="experienceInput" placeholder="Web Developer at Company XYZ">
+          </div>
+          <button type="button" id="addExperienceBtn">+ Add Experience</button>
+        </label>
+      </form>
+
+      <button id="downloadBtn">Download CV as PDF</button>
+    </section>
+
+    <section id="preview-section">
+      <h2>CV Preview</h2>
+
+      <div id="cvPreview">
+        <h1 id="previewName">Your Name</h1>
+        <h3 id="previewTitle">Job Title</h3>
+
+        <p id="previewContact">Email | Phone | Location</p>
+
+        <h4>Profile</h4>
+        <p id="previewSummary">Your professional summary will appear here.</p>
+
+        <h4>Skills</h4>
+        <ul id="previewSkills">
+          <li>Your skills will appear here</li>
+        </ul>
+
+        <h4>Education</h4>
+        <ul id="previewEducation">
+          <li>Your education will appear here</li>
+        </ul>
+
+        <h4>Experience</h4>
+        <ul id="previewExperience">
+          <li>Your experience will appear here</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>by Kechairi Imene</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
